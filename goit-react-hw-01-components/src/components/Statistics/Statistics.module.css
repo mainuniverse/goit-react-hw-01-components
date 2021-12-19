@@ -1,0 +1,19 @@
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 270px;
+}
+
+.statList {
+  display: flex;
+}
+
+.item {
+  width: calc(100% / 4);
+  outline: 2px solid gray;
+}
+.percentage,
+.label {
+  display: flex;
+  justify-content: space-around;
+}
