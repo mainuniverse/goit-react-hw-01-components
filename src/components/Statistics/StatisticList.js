@@ -3,9 +3,10 @@ import Statistics from './Statistics';
 import s from './Statistics.module.css';
 import generateColor from './generateColor';
 
-const StatisticList = ({ stats }) => {
+const StatisticList = ({ stats, title}) => {
     return (
-        <div className={s.wrapper}>
+            <div className={s.wrapper}>
+                {title && <h2 className={s.title}>{title}</h2>}
             <ul className={s.statList}>
                 {stats.map(stat => (
                     <li
@@ -25,6 +26,7 @@ const StatisticList = ({ stats }) => {
 };
 
 StatisticList.propTypes = {
+    title: PropTypes.string,
     stats: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.string.isRequired,
